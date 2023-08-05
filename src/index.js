@@ -8,10 +8,10 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   script.id = scriptId;
   script.defer = "defer";
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-  // script.type = "text/partytown";
+  script.type = "text/partytown";
   script.fetchpriority = "low";
   head.appendChild(script);
-  // window.dispatchEvent(new CustomEvent("ptupdate"));
+  window.dispatchEvent(new CustomEvent("ptupdate"));
 
   window.dataLayer = window.dataLayer || [];
 
