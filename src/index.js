@@ -9,9 +9,11 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
   script.type = "text/partytown";
+  script.fetchpriority = "low";
   head.insertBefore(script, head.firstChild);
 
   window.dataLayer = window.dataLayer || [];
+  window.dispatchEvent(new CustomEvent("ptupdate"));
 
   gtag("js", new Date());
   gtag("config", trackingId, additionalConfigInfo);
