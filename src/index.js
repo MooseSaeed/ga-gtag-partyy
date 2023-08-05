@@ -10,7 +10,7 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
   script.type = "text/partytown";
   script.fetchpriority = "low";
-  head.insertBefore(script, head.firstChild);
+  head.append(script);
   window.dispatchEvent(new CustomEvent("ptupdate"));
 
   window.dataLayer = window.dataLayer || [];
