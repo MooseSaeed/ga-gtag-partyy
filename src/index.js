@@ -6,12 +6,12 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   const { head } = document;
   const script = document.createElement("script");
   script.id = scriptId;
-  script.async = true;
+  script.defer = "defer";
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-  script.type = "text/partytown";
-  script.fetchpriority = "low";
+  //   script.type = "text/partytown";
+  //   script.fetchpriority = "low";
   head.append(script);
-  window.dispatchEvent(new CustomEvent("ptupdate"));
+  //   window.dispatchEvent(new CustomEvent("ptupdate"));
 
   window.dataLayer = window.dataLayer || [];
 
