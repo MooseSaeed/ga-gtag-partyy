@@ -1,38 +1,46 @@
 {
-    "name": "ga-gtag",
-    "version": "1.1.7",
-    "description": "ES module for the Google Analytics Global Site Tag.",
-    "license": "MIT",
-    "repository": "idmadj/ga-gtag",
-    "main": "lib/index.js",
-    "scripts": {
-        "build": "babel src -d lib",
-        "build:watch": "babel src -d lib -w",
-        "prepublishOnly": "npm run build"
-    },
-    "keywords": [
-        "ads",
-        "analytics",
-        "esm",
-        "ga",
-        "ga4",
-        "global",
-        "gmp",
-        "google",
-        "gtag",
-        "gtag.js",
-        "marketing",
-        "module",
-        "platform",
-        "site",
-        "tag",
-        "ua",
-        "universal",
-        "tracking"
-    ],
-    "devDependencies": {
-        "@babel/cli": "^7.20.7",
-        "@babel/core": "^7.20.12",
-        "@babel/preset-env": "^7.20.2"
-    }
+  "name": "@moosesaeed/partytown-ga-gtag",
+  "version": "0.0.1",
+  "description": "ES module for the Google Analytics Global Site Tag with partytown attribute.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MooseSaeed/ga-gtag-partyy.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "build:watch": "babel src -d lib -w",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "keywords": [
+    "ads",
+    "analytics",
+    "esm",
+    "ga",
+    "ga4",
+    "global",
+    "gmp",
+    "google",
+    "gtag",
+    "gtag.js",
+    "marketing",
+    "module",
+    "platform",
+    "site",
+    "tag",
+    "ua",
+    "universal",
+    "tracking"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "standard-version": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
