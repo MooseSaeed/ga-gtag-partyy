@@ -1,6 +1,6 @@
 {
   "name": "@moosesaeed/partytown-ga-gtag",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ES module for the Google Analytics Global Site Tag with partytown attribute.",
   "license": "MIT",
   "repository": {
