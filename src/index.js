@@ -8,13 +8,19 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   script.id = scriptId;
   script.defer = "defer";
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+  script.type = "text/partytown";
   script.fetchpriority = "low";
   head.appendChild(script);
 
-  window.dataLayer = window.dataLayer || [];
-
-  gtag("js", new Date());
-  gtag("config", trackingId, additionalConfigInfo);
+  const initScript = document.createElement("script");
+  initScript.type = "text/partytown";
+  initScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "${trackingId}");
+  `;
+  head.appendChild(initScript);
 };
 
 export const gtag = function () {
