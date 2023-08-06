@@ -11,7 +11,6 @@ export const install = (trackingId, additionalConfigInfo = {}) => {
   script.type = "text/partytown";
   script.fetchpriority = "low";
   head.appendChild(script);
-  window.dispatchEvent(new CustomEvent("ptupdate"));
 
   window.dataLayer = window.dataLayer || [];
 
