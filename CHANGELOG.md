@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/MooseSaeed/ga-gtag-partyy/compare/v0.0.11...v0.0.12) (2023-08-06)
+
+
+### Bug Fixes
+
+* :bug: ([e90ce06](https://github.com/MooseSaeed/ga-gtag-partyy/commit/e90ce0649e2f9f998a8dd6c0fb8d2ec178c1e816))
+
 ### [0.0.11](https://github.com/MooseSaeed/ga-gtag-partyy/compare/v0.0.10...v0.0.11) (2023-08-06)
 
 
